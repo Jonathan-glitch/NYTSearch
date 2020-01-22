@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var key = "avuSK6heSVhbgHOfLHpijm0Jh6DN8cZR"
+      var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=" +search+"&api-key=" + key
+      var search = searchterm + "AND" + yearstart + 
+      var searchterm = 0 
+      var yearstart = 'pub_year' + yearfieldstart
+      var yearend = 'pub_year' + yearfieldend
+      $.ajax({
+          url:queryURL,
+          method: "GET"
+      })
+      .then(function(response) {
+          console.log(queryURL);
+          console.log(response);
+      })
+
+    </script>
+</body>
+</html>
